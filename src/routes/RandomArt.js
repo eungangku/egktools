@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import FastAverageColor from "fast-average-color";
 import styles from "./RandomArt.module.css";
+import FastAverageColor from "fast-average-color";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function RandomArt() {
   const [tryCount, setTryCount] = useState(0);
@@ -8,6 +10,7 @@ function RandomArt() {
   const [data, setData] = useState([]);
   const [imgUrl, setImgUrl] = useState("");
   const [averageColor, setAverageColor] = useState("");
+  const [imgTagLoading, setImgTagLoading] = useState(true);
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -49,13 +52,20 @@ function RandomArt() {
   const onContainerClick = () => {
     setTryCount((prev) => prev + 1);
   };
+
+  const onImageLoading = () => {
+    setImgTagLoading(false);
+  };
   return (
     <div onClick={onContainerClick} className={styles.container} style={{ backgroundColor: averageColor }}>
       {loading ? (
-        <h1>Loading..</h1>
+        <div>
+          <Skeleton height={"30vh"} />
+        </div>
       ) : (
         <div>
-          <img src={imgUrl} />
+          {imgTagLoading ? <Skeleton height={"30vh"} /> : null}
+          <img onLoad={onImageLoading} src={imgUrl} />
           <div className={styles.desc}>
             <h1 className={styles.title}>{data.title}</h1>
             <h3 className={styles.date}>{data.objectDate}</h3>
