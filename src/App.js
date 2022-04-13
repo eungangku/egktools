@@ -9,6 +9,9 @@ function Home() {
     <div id="wrap">
       <div>
         <div>
+          <RandomArt />
+        </div>
+        <div>
           <Link to="/img-upload">Img upload</Link>
         </div>
         <div>
