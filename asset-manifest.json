@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/EGKTools/static/js/main.a436c4c5.js",
+    "main.css": "/EGKTools/static/css/main.ee72e033.css",
+    "main.js": "/EGKTools/static/js/main.427b4339.js",
     "index.html": "/EGKTools/index.html",
-    "main.a436c4c5.js.map": "/EGKTools/static/js/main.a436c4c5.js.map"
+    "main.ee72e033.css.map": "/EGKTools/static/css/main.ee72e033.css.map",
+    "main.427b4339.js.map": "/EGKTools/static/js/main.427b4339.js.map"
   },
   "entrypoints": [
-    "static/js/main.a436c4c5.js"
+    "static/css/main.ee72e033.css",
+    "static/js/main.427b4339.js"
   ]
 }
