@@ -2,4 +2,4 @@
 
 https://egktools.heroku.app
 
-is Migrating to React EGKTools.
+React EGKTools is under development.
