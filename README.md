@@ -1,6 +1,6 @@
 # EGKTools
 
-https://egktools.heroku.app
+https://egktools.herokuapp.com
 
 ## EGKTools on React
 
