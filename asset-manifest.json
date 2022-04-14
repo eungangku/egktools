@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/EGKTools/static/css/main.41c84983.css",
-    "main.js": "/EGKTools/static/js/main.b291dfcf.js",
+    "main.css": "/EGKTools/static/css/main.0305dda9.css",
+    "main.js": "/EGKTools/static/js/main.135e5f5a.js",
+    "static/media/SBaggroB.ttf": "/EGKTools/static/media/SBaggroB.2bd2f65ded5ef6e562d3.ttf",
     "index.html": "/EGKTools/index.html",
-    "main.41c84983.css.map": "/EGKTools/static/css/main.41c84983.css.map",
-    "main.b291dfcf.js.map": "/EGKTools/static/js/main.b291dfcf.js.map"
+    "main.0305dda9.css.map": "/EGKTools/static/css/main.0305dda9.css.map",
+    "main.135e5f5a.js.map": "/EGKTools/static/js/main.135e5f5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.41c84983.css",
-    "static/js/main.b291dfcf.js"
+    "static/css/main.0305dda9.css",
+    "static/js/main.135e5f5a.js"
   ]
 }
