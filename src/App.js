@@ -2,6 +2,7 @@ import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ClockTab from "./routes/ClockTab";
 import ImgUpload from "./routes/ImgUpload";
 import RandomArt from "./routes/RandomArt";
+import Header from "./components/Header";
 import VideoDurationCalculator from "./routes/VideoDurationCalculator";
 
 function Home() {
@@ -28,11 +29,12 @@ function Home() {
 function App() {
   return (
     <div id="wrap">
-      <div id="header">
+      {/* <div id="header">
         <div>
           <h1>EGKTools</h1>
         </div>
-      </div>
+      </div> */}
+      <Header>EGKTools</Header>
 
       <div id="content">
         <Router>
