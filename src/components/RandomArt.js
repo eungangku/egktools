@@ -4,7 +4,7 @@ import FastAverageColor from "fast-average-color";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-function RandomArt() {
+function RandomArt(props) {
   const [tryCount, setTryCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -27,6 +27,7 @@ function RandomArt() {
       .getColorAsync(image, { algorithm: "sqrt" })
       .then((color) => {
         setAverageColor(color.hex);
+        props.func(color.hex);
         setLoading(false);
       })
       .catch((e) => console.log(e));

@@ -1,16 +1,20 @@
+import { useState } from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Header from "./components/Header";
+import RandomArt from "./components/RandomArt";
 import ClockTab from "./routes/ClockTab";
 import ImgUpload from "./routes/ImgUpload";
-import RandomArt from "./routes/RandomArt";
-import Header from "./components/Header";
+import RandomArtDetail from "./routes/RandomArtDetail";
 import VideoDurationCalculator from "./routes/VideoDurationCalculator";
 
 function Home() {
+  const [primaryColor, setprimaryColor] = useState("#000000");
   return (
     <div id="wrap">
+      <Header primaryColor={primaryColor}>EGK Tools</Header>
       <div>
         <div>
-          <RandomArt />
+          <RandomArt func={(data) => setprimaryColor(data)} />
         </div>
         <div>
           <Link to="/img-upload">Img upload</Link>
@@ -29,12 +33,12 @@ function Home() {
 function App() {
   return (
     <div id="wrap">
-      <Header>EGK Tools</Header>
+      {/* <Header primaryColor={"#000000"}>EGK Tools</Header> */}
 
       <div id="content">
         <Router>
           <Routes>
-            <Route path="/random-art/:id" element={<RandomArt />} />
+            <Route path="/random-art/:id" element={<RandomArtDetail />} />
             <Route path="/img-upload" element={<ImgUpload />} />
             <Route path="/video-duration-calculator" element={<VideoDurationCalculator />} />
             <Route path="/clock-tab" element={<ClockTab />} />

@@ -1,8 +1,10 @@
 .container {
-  padding: 25px;
+  padding: 15px;
+  margin: 15px;
 }
 
 .container h1 {
+  display: inline-block;
   font-size: 2em;
   font-weight: bold;
 }
