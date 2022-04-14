@@ -29,12 +29,7 @@ function Home() {
 function App() {
   return (
     <div id="wrap">
-      {/* <div id="header">
-        <div>
-          <h1>EGKTools</h1>
-        </div>
-      </div> */}
-      <Header>EGKTools</Header>
+      <Header>EGK Tools</Header>
 
       <div id="content">
         <Router>

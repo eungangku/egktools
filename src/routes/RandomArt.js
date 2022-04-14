@@ -50,6 +50,8 @@ function RandomArt() {
   }, [tryCount]);
 
   const onContainerClick = () => {
+    setLoading(true);
+    setImgTagLoading(true);
     setTryCount((prev) => prev + 1);
   };
 
