@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.module.css";
 import Header from "./components/Header";
 import RandomArt from "./components/RandomArt";
 import ClockTab from "./routes/ClockTab";
@@ -11,7 +12,9 @@ function Home() {
   const [primaryColor, setprimaryColor] = useState("#000000");
   return (
     <div id="wrap">
-      <Header primaryColor={primaryColor}>EGK Tools</Header>
+      <Header primaryColor={primaryColor} textFillColor={"transparent"}>
+        EGK Tools
+      </Header>
       <div>
         <div>
           <RandomArt func={(data) => setprimaryColor(data)} />
@@ -33,8 +36,6 @@ function Home() {
 function App() {
   return (
     <div id="wrap">
-      {/* <Header primaryColor={"#000000"}>EGK Tools</Header> */}
-
       <div id="content">
         <Router>
           <Routes>

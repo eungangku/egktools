@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
 
-function Header({ children, primaryColor }) {
+function Header({ children, primaryColor = "#000000", textFillColor = "black" }) {
   return (
     <div id="header" className={styles.container}>
       <div>
@@ -13,7 +13,7 @@ function Header({ children, primaryColor }) {
             background: `linear-gradient(to right, ${primaryColor} 0%, #000000 100%)`,
             WebkitBackgroundClip: "text",
             backgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            WebkitTextFillColor: textFillColor,
           }}
         >
           {children}
