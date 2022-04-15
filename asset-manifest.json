@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/EGKTools/static/css/main.0305dda9.css",
-    "main.js": "/EGKTools/static/js/main.135e5f5a.js",
-    "static/media/SBaggroB.ttf": "/EGKTools/static/media/SBaggroB.2bd2f65ded5ef6e562d3.ttf",
+    "main.css": "/EGKTools/static/css/main.c0fa8685.css",
+    "main.js": "/EGKTools/static/js/main.29375cea.js",
+    "static/media/NotoSansKR-Bold.otf": "/EGKTools/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
+    "static/media/NotoSansKR-Regular.otf": "/EGKTools/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
+    "static/media/DoHyeon-Regular.ttf": "/EGKTools/static/media/DoHyeon-Regular.33a15385076163ccf1b8.ttf",
     "index.html": "/EGKTools/index.html",
-    "main.0305dda9.css.map": "/EGKTools/static/css/main.0305dda9.css.map",
-    "main.135e5f5a.js.map": "/EGKTools/static/js/main.135e5f5a.js.map"
+    "main.c0fa8685.css.map": "/EGKTools/static/css/main.c0fa8685.css.map",
+    "main.29375cea.js.map": "/EGKTools/static/js/main.29375cea.js.map"
   },
   "entrypoints": [
-    "static/css/main.0305dda9.css",
-    "static/js/main.135e5f5a.js"
+    "static/css/main.c0fa8685.css",
+    "static/js/main.29375cea.js"
   ]
 }
