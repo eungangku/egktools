@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #f3f3f3;
+}
+.cardIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #f3f3f3;
+}
+
+.card h3 {
+  font-family: "NotoSansKR-Bold";
+  font-size: 1.2em;
+}
+
+.card p {
+  padding-top: 7px;
+}
+
+.cardIcon h3 {
+  display: inline-block;
+  padding-right: 10px;
+  font-family: "NotoSansKR-Bold";
+  font-size: 1.3em;
+}
