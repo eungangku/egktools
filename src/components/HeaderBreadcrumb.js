@@ -1,10 +1,7 @@
+import styles from "./HeaderBreadcrumb.module.css";
+
 function HeaderBreadcrumb({ children }) {
-  return (
-    <span style={{ fontSize: "0.7em" }}>
-      {" "}
-      {">"} {children}{" "}
-    </span>
-  );
+  return <span className={styles.span}> {children}</span>;
 }
 
 export default HeaderBreadcrumb;

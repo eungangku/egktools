@@ -1,11 +1,12 @@
 .container {
+  position: relative;
   padding: 15px;
   margin: 15px;
-  font-family: "SBaggroB";
+  font-family: "DoHyeon";
 }
 
-.container h1 {
+/* .container h1 {
   display: inline-block;
   font-size: 2em;
   font-weight: bold;
-}
+} */

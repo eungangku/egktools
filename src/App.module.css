@@ -1,4 +1,12 @@
 @font-face {
-  font-family: "SBaggroB";
-  src: url("./fonts/SBaggroB.ttf");
+  font-family: "DoHyeon";
+  src: url("./fonts/DoHyeon-Regular.ttf");
+}
+@font-face {
+  font-family: "NotoSansKR-Bold";
+  src: url("./fonts/NotoSansKR-Bold.otf");
+}
+@font-face {
+  font-family: "NotoSansKR-Regular";
+  src: url("./fonts/NotoSansKR-Regular.otf");
 }
