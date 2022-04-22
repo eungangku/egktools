@@ -15,6 +15,25 @@ import ImgUpload from "./routes/ImgUpload";
 import RandomArtDetail from "./routes/RandomArtDetail";
 import VideoDurationCalculator from "./routes/VideoDurationCalculator";
 
+function ToolList({ style = {} }) {
+  return (
+    <div id="toolList" className={styles.toolList} style={style}>
+      <Link to="/img-upload" style={{ background: "#b6e2ff" }}>
+        <SiImgur />
+        <p>사진 업로드</p>
+      </Link>
+      <Link to="/video-duration-calculator" style={{ background: "lightgoldenrodyellow" }}>
+        <RiSpeedFill />
+        <p>영상 배속 계산기</p>
+      </Link>
+      <Link to="/clock-tab">
+        <FiClock />
+        <p>시계</p>
+      </Link>
+    </div>
+  );
+}
+
 function Home() {
   const [primaryColor, setprimaryColor] = useState("#000000");
 
@@ -31,37 +50,14 @@ function Home() {
         </ContainerDiv>
         <ContainerDiv>
           <Mobile>
-            <div id="toolList" className={styles.toolList}>
-              <Link to="/img-upload" style={{ background: "#b6e2ff" }}>
-                <SiImgur />
-                <p>사진 업로드</p>
-              </Link>
-              <Link to="/video-duration-calculator" style={{ background: "lightgoldenrodyellow" }}>
-                <RiSpeedFill />
-                <p>영상 배속 계산기</p>
-              </Link>
-              <Link to="/clock-tab">
-                <FiClock />
-                <p>시계</p>
-              </Link>
-            </div>
+            <ToolList />
           </Mobile>
           <Tablet>
-            <div id="toolList" className={styles.toolList} style={{ gridTemplateColumns: "1fr 1fr 1fr" }}>
-              <Link to="/img-upload" style={{ background: "#b6e2ff" }}>
-                <SiImgur />
-                <p>사진 업로드</p>
-              </Link>
-              <Link to="/video-duration-calculator" style={{ background: "lightgoldenrodyellow" }}>
-                <RiSpeedFill />
-                <p>영상 배속 계산기</p>
-              </Link>
-              <Link to="/clock-tab">
-                <FiClock />
-                <p>시계</p>
-              </Link>
-            </div>
+            <ToolList style={{ gridTemplateColumns: "1fr 1fr 1fr" }} />
           </Tablet>
+          <Desktop>
+            <ToolList style={{ gridTemplateColumns: "1fr 1fr 1fr" }} />
+          </Desktop>
         </ContainerDiv>
       </div>
     </div>
