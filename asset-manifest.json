@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/EGKTools/static/css/main.f1f77007.css",
-    "main.js": "/EGKTools/static/js/main.aff003c5.js",
+    "main.js": "/EGKTools/static/js/main.29878c47.js",
     "static/media/NotoSansKR-Bold.otf": "/EGKTools/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
     "static/media/NotoSansKR-Regular.otf": "/EGKTools/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
     "static/media/DoHyeon-Regular.ttf": "/EGKTools/static/media/DoHyeon-Regular.33a15385076163ccf1b8.ttf",
@@ -9,6 +9,7 @@
     "static/media/roboto-all-700-normal.woff": "/EGKTools/static/media/roboto-all-700-normal.ef6d1d09b20b877fee4e.woff",
     "static/media/roboto-all-400-normal.woff": "/EGKTools/static/media/roboto-all-400-normal.376ea5d93f71583052f6.woff",
     "static/media/roboto-all-300-normal.woff": "/EGKTools/static/media/roboto-all-300-normal.8fc5f5f22c9951113696.woff",
+    "static/media/notification.mp3": "/EGKTools/static/media/notification.8332b07f14de8eb9851d.mp3",
     "static/media/roboto-latin-500-normal.woff2": "/EGKTools/static/media/roboto-latin-500-normal.869888415d0b1a99ae5c.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/EGKTools/static/media/roboto-latin-700-normal.0682ca7f74351d42bf73.woff2",
     "static/media/roboto-latin-300-normal.woff2": "/EGKTools/static/media/roboto-latin-300-normal.0109a2ace896a506a0aa.woff2",
@@ -39,10 +40,10 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/EGKTools/static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
     "index.html": "/EGKTools/index.html",
     "main.f1f77007.css.map": "/EGKTools/static/css/main.f1f77007.css.map",
-    "main.aff003c5.js.map": "/EGKTools/static/js/main.aff003c5.js.map"
+    "main.29878c47.js.map": "/EGKTools/static/js/main.29878c47.js.map"
   },
   "entrypoints": [
     "static/css/main.f1f77007.css",
-    "static/js/main.aff003c5.js"
+    "static/js/main.29878c47.js"
   ]
 }
