@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import DateNow from "../components/DateNow";
+import notifySoundMp3 from "../assets/sounds/notification.mp3";
 import { useCountdownTimer } from "use-countdown-timer";
 import prettyMilliseconds from "pretty-ms";
 import { Container, Typography, Box, LinearProgress, Card, Button, CardActions, Stack } from "@mui/material";
@@ -19,18 +20,26 @@ function PomodoroTimer({ type, time }) {
     timer: 1000 * time,
     autostart: true,
     onExpire: () => {
-      if (type === "focus") {
-        window.location.href = restUrl;
-      } else {
-        window.location.href = focusUrl;
-      }
-      window.location.reload();
+      playNotifySound();
+      setTimeout(() => {
+        if (type === "focus") {
+          window.location.href = restUrl;
+        } else {
+          window.location.href = focusUrl;
+        }
+        window.location.reload();
+      }, 3000);
     },
   });
 
   useEffect(() => {
     document.title = `${prettyMilliseconds(countdown, { colonNotation: true })} - ${type}`;
   }, [countdown]);
+
+  function playNotifySound() {
+    const audioElement = new Audio(notifySoundMp3);
+    audioElement.play();
+  }
 
   function switchToFocus() {
     if (type === "focus") {
