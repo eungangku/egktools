@@ -49,6 +49,34 @@ function ToolList({ style = {} }) {
 function Home() {
   const [primaryColor, setprimaryColor] = useState("#000000");
 
+  return (
+    <div id="wrap">
+      <Header>
+        <Title primaryColor={primaryColor} textFillColor={"transparent"}>
+          EGK Tools
+        </Title>
+      </Header>
+      <div>
+        <ContainerDiv margin="15px 15px 30px 15px">
+          <RandomArt func={(data) => setprimaryColor(data)} />
+        </ContainerDiv>
+        <ContainerDiv>
+          <Mobile>
+            <ToolList />
+          </Mobile>
+          <Tablet>
+            <ToolList style={{ gridTemplateColumns: "1fr 1fr 1fr" }} />
+          </Tablet>
+          <Desktop>
+            <ToolList style={{ gridTemplateColumns: "1fr 1fr 1fr" }} />
+          </Desktop>
+        </ContainerDiv>
+      </div>
+    </div>
+  );
+}
+
+function App() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const theme = useMemo(
     () =>
@@ -64,47 +92,19 @@ function Home() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div id="wrap">
-        <Header>
-          <Title primaryColor={primaryColor} textFillColor={"transparent"}>
-            EGK Tools
-          </Title>
-        </Header>
-        <div>
-          <ContainerDiv margin="15px 15px 30px 15px">
-            <RandomArt func={(data) => setprimaryColor(data)} />
-          </ContainerDiv>
-          <ContainerDiv>
-            <Mobile>
-              <ToolList />
-            </Mobile>
-            <Tablet>
-              <ToolList style={{ gridTemplateColumns: "1fr 1fr 1fr" }} />
-            </Tablet>
-            <Desktop>
-              <ToolList style={{ gridTemplateColumns: "1fr 1fr 1fr" }} />
-            </Desktop>
-          </ContainerDiv>
-        </div>
+        <Router>
+          <Routes>
+            <Route path="/random-art/:id" element={<RandomArtDetail />} />
+            <Route path="/img-upload" element={<ImgUpload />} />
+            <Route path="/video-duration-calculator" element={<VideoDurationCalculator />} />
+            <Route path="/clock-tab" element={<ClockTab />} />
+            <Route path="/pomodoro-timer/rest" element={<PomodoroTimer type={"rest"} time={60 * 6} />} />
+            <Route path="/pomodoro-timer" element={<PomodoroTimer type={"focus"} time={60 * 30} />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Router>
       </div>
     </ThemeProvider>
-  );
-}
-
-function App() {
-  return (
-    <div id="wrap">
-      <Router>
-        <Routes>
-          <Route path="/random-art/:id" element={<RandomArtDetail />} />
-          <Route path="/img-upload" element={<ImgUpload />} />
-          <Route path="/video-duration-calculator" element={<VideoDurationCalculator />} />
-          <Route path="/clock-tab" element={<ClockTab />} />
-          <Route path="/pomodoro-timer/rest" element={<PomodoroTimer type={"rest"} time={60 * 6} />} />
-          <Route path="/pomodoro-timer" element={<PomodoroTimer type={"focus"} time={60 * 30} />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router>
-    </div>
   );
 }
 
