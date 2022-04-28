@@ -26,7 +26,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 function ToolList({ style = {} }) {
   return (
     <div id="toolList" className={styles.toolList} style={style}>
-      <Link to="/img-upload" style={{ background: "#b6e2ff" }}>
+      <Link to="/img-upload" style={{ background: "#a5d6a7" }}>
         <SiImgur />
         <p>사진 업로드</p>
       </Link>

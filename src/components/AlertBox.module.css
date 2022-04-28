@@ -14,6 +14,17 @@
   background-color: #f3f3f3;
 }
 
+.cardIcon h3 {
+  display: flex;
+  margin: 0;
+  padding-right: 10px;
+  font-family: "NotoSansKR-Bold";
+  font-size: 1.3em;
+}
+.cardIcon p {
+  margin: 0;
+}
+
 .card h3 {
   font-family: "NotoSansKR-Bold";
   font-size: 1.2em;
@@ -21,11 +32,4 @@
 
 .card p {
   padding-top: 7px;
-}
-
-.cardIcon h3 {
-  display: inline-block;
-  padding-right: 10px;
-  font-family: "NotoSansKR-Bold";
-  font-size: 1.3em;
 }

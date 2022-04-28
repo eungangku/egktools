@@ -8,7 +8,7 @@ function ImgUpload() {
   return (
     <div>
       <Header>
-        <Title primaryColor="#b6e2ff" textFillColor="transparent">
+        <Title primaryColor="#a5d6a7" textFillColor="transparent">
           사진 업로드
         </Title>
         <HeaderBreadcrumb>EGK Tools</HeaderBreadcrumb>

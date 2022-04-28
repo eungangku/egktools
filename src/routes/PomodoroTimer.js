@@ -2,8 +2,12 @@ import { useState, useEffect } from "react";
 import { useCountdownTimer } from "use-countdown-timer";
 import prettyMilliseconds from "pretty-ms";
 import DateNow from "../components/DateNow";
+import Header from "../components/Header";
+import Title from "../components/Title";
+import HeaderBreadcrumb from "../components/HeaderBreadcrumb";
 import notifySoundMp3 from "../assets/sounds/notification.mp3";
 import { Container, Typography, Box, LinearProgress, Card, Button, CardActions, Stack } from "@mui/material";
+import { HeadphonesRounded } from "@mui/icons-material";
 
 function PomodoroTimer({ type, time }) {
   const focusUrl = "https://eungangku.github.io/EGKTools/#/pomodoro-timer";
@@ -16,23 +20,6 @@ function PomodoroTimer({ type, time }) {
     }
   }, []);
 
-  function consoleTest() {
-    return new Promise((resolve) => {
-      console.log("apple");
-      setTimeout(() => {
-        resolve();
-      }, 2000);
-    });
-  }
-
-  // function playNotifySound() {
-  //   return new Promise((resolve) => {
-  //     const audioElement = new Audio(notifySoundMp3);
-  //     audioElement.play();
-
-  //     audioElement.addEventListener("ended", () => resolve());
-  //   });
-  // }
   function playNotifySound() {
     const audioElement = new Audio(notifySoundMp3);
     audioElement.play();
@@ -81,14 +68,20 @@ function PomodoroTimer({ type, time }) {
   return (
     <Container maxWidth="sm">
       <Box sx={{ padding: "20px 0" }}>
-        <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={0}>
+        {/* <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={0}>
           <Typography variant="h4" gutterBottom={true} sx={{ fontWeight: "bold" }}>
             Pomodoro Timer
           </Typography>
           <Typography variant="caption" gutterBottom={true} sx={{}}>
             <DateNow format="hh:mm A" />
           </Typography>
-        </Stack>
+        </Stack> */}
+        <Header type={"fill"}>
+          <Title>뽀모도로 타이머</Title>
+          <HeaderBreadcrumb>
+            <DateNow format="hh:mm A" />
+          </HeaderBreadcrumb>
+        </Header>
       </Box>
       <Box sx={{}}>
         <Box sx={{}}>
