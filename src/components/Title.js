@@ -1,6 +1,6 @@
 import styles from "./Title.module.css";
 
-function Title({ children, primaryColor = "#000000", textFillColor = "black" }) {
+function Title({ children, primaryColor = "#000000", textFillColor = "unset" }) {
   return (
     <h1
       className={styles.title}

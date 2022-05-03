@@ -68,14 +68,6 @@ function PomodoroTimer({ type, time }) {
   return (
     <Container maxWidth="sm">
       <Box sx={{ padding: "20px 0" }}>
-        {/* <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={0}>
-          <Typography variant="h4" gutterBottom={true} sx={{ fontWeight: "bold" }}>
-            Pomodoro Timer
-          </Typography>
-          <Typography variant="caption" gutterBottom={true} sx={{}}>
-            <DateNow format="hh:mm A" />
-          </Typography>
-        </Stack> */}
         <Header type={"fill"}>
           <Title>뽀모도로 타이머</Title>
           <HeaderBreadcrumb>
