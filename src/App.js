@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import RandomArt from "./components/RandomArt";
 import Title from "./components/Title";
 import ContainerDiv from "./components/ContainerDiv";
+import Quotes from "./components/Quotes";
 import { Mobile, Tablet, Desktop } from "./components/Responsive";
 import { SiImgur } from "react-icons/si";
 import { RiSpeedFill } from "react-icons/ri";
@@ -70,6 +71,9 @@ function Home() {
           <Desktop>
             <ToolList style={{ gridTemplateColumns: "1fr 1fr 1fr" }} />
           </Desktop>
+        </ContainerDiv>
+        <ContainerDiv>
+          <Quotes />
         </ContainerDiv>
       </div>
     </div>
