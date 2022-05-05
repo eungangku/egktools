@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/EGKTools/static/css/main.83a5fa66.css",
-    "main.js": "/EGKTools/static/js/main.53f1b1b0.js",
+    "main.js": "/EGKTools/static/js/main.5725cc49.js",
     "static/media/NotoSansKR-Bold.otf": "/EGKTools/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
     "static/media/NotoSansKR-Regular.otf": "/EGKTools/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
     "static/media/DoHyeon-Regular.ttf": "/EGKTools/static/media/DoHyeon-Regular.33a15385076163ccf1b8.ttf",
@@ -40,10 +40,10 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/EGKTools/static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
     "index.html": "/EGKTools/index.html",
     "main.83a5fa66.css.map": "/EGKTools/static/css/main.83a5fa66.css.map",
-    "main.53f1b1b0.js.map": "/EGKTools/static/js/main.53f1b1b0.js.map"
+    "main.5725cc49.js.map": "/EGKTools/static/js/main.5725cc49.js.map"
   },
   "entrypoints": [
     "static/css/main.83a5fa66.css",
-    "static/js/main.53f1b1b0.js"
+    "static/js/main.5725cc49.js"
   ]
 }
