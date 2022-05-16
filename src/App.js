@@ -1,25 +1,28 @@
 import { useState, useMemo } from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import Carousel from "react-material-ui-carousel";
+import Carousel from "react-mui-carousel-artemm";
 import "./App.css";
 import styles from "./App.module.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 import Header from "./components/Header";
 import RandomArt from "./components/RandomArt";
+import RandomUnsplash from "./components/RandomUnsplash";
 import Title from "./components/Title";
 import ContainerDiv from "./components/ContainerDiv";
 import Quotes from "./components/Quotes";
 import { Mobile, Tablet, Desktop } from "./components/Responsive";
-import { SiImgur } from "react-icons/si";
-import { RiSpeedFill } from "react-icons/ri";
-import { FiClock } from "react-icons/fi";
 import ClockTab from "./routes/ClockTab";
 import ImgUpload from "./routes/ImgUpload";
 import RandomArtDetail from "./routes/RandomArtDetail";
 import VideoDurationCalculator from "./routes/VideoDurationCalculator";
 import PomodoroTimer from "./routes/PomodoroTimer";
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
+import { SiImgur } from "react-icons/si";
+import { RiSpeedFill } from "react-icons/ri";
+import { FiClock } from "react-icons/fi";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -53,13 +56,18 @@ function Home() {
   return (
     <div id="wrap">
       <Header>
-        <Title primaryColor={primaryColor} textFillColor={"transparent"}>
+        {/* <Title primaryColor={primaryColor} textFillColor={"transparent"}>
           EGK Tools
-        </Title>
+        </Title> */}
+        <Title>EGK Tools</Title>
       </Header>
       <div>
         <ContainerDiv margin="15px 15px 30px 15px">
-          <RandomArt func={(data) => setprimaryColor(data)} />
+          <Carousel interval={8000}>
+            <RandomUnsplash />
+            <RandomArt func={(data) => setprimaryColor(data)} />
+            <Quotes backgroundColor={primaryColor} />
+          </Carousel>
         </ContainerDiv>
         <ContainerDiv>
           <Mobile>
@@ -72,9 +80,7 @@ function Home() {
             <ToolList style={{ gridTemplateColumns: "1fr 1fr 1fr" }} />
           </Desktop>
         </ContainerDiv>
-        <ContainerDiv>
-          <Quotes />
-        </ContainerDiv>
+        <ContainerDiv></ContainerDiv>
       </div>
     </div>
   );

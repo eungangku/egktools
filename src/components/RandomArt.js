@@ -70,8 +70,10 @@ function RandomArt(props) {
           {imgTagLoading ? <Skeleton height={"30vh"} /> : null}
           <img onLoad={onImageLoading} src={imgUrl} />
           <div className={styles.desc}>
-            <h1 className={styles.title}>{data.title}</h1>
-            <h3 className={styles.date}>{data.objectDate}</h3>
+            <h3 className={styles.date}>
+              {data.title}
+              {` | ${data.objectDate}`}
+            </h3>
           </div>
         </div>
       )}
