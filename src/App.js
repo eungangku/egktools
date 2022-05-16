@@ -63,7 +63,7 @@ function Home() {
       </Header>
       <div>
         <ContainerDiv margin="15px 15px 30px 15px">
-          <Carousel interval={8000}>
+          <Carousel interval={8000} indicators={false}>
             <RandomUnsplash />
             <RandomArt func={(data) => setprimaryColor(data)} />
             <Quotes backgroundColor={primaryColor} />
