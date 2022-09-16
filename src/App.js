@@ -20,6 +20,7 @@ import ImgUpload from "./routes/ImgUpload";
 import RandomArtDetail from "./routes/RandomArtDetail";
 import VideoDurationCalculator from "./routes/VideoDurationCalculator";
 import PomodoroTimer from "./routes/PomodoroTimer";
+import Isbn from "./routes/Isbn";
 import { SiImgur } from "react-icons/si";
 import { RiSpeedFill } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
@@ -45,6 +46,10 @@ function ToolList({ style = {} }) {
       <Link to="/pomodoro-timer">
         <FiClock />
         <p>뽀모도로 타이머</p>
+      </Link>
+      <Link to="/isbn-tools">
+        <FiClock />
+        <p>ISBN Tools</p>
       </Link>
     </div>
   );
@@ -110,6 +115,7 @@ function App() {
             <Route path="/clock-tab" element={<ClockTab />} />
             <Route path="/pomodoro-timer/rest" element={<PomodoroTimer type={"rest"} time={60 * 6} />} />
             <Route path="/pomodoro-timer" element={<PomodoroTimer type={"focus"} time={60 * 30} />} />
+            <Route path="/isbn-tools" element={<Isbn />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </Router>
