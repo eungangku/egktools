@@ -24,6 +24,7 @@ import Isbn from "./routes/Isbn";
 import { SiImgur } from "react-icons/si";
 import { RiSpeedFill } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
+import { ImLibrary } from "react-icons/im";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -48,7 +49,7 @@ function ToolList({ style = {} }) {
         <p>뽀모도로 타이머</p>
       </Link>
       <Link to="/isbn-tools">
-        <FiClock />
+        <ImLibrary />
         <p>ISBN Tools</p>
       </Link>
     </div>
