@@ -11,7 +11,7 @@ function Isbn() {
   const [outputCount, setOutputCount] = useState("0");
 
   const cutAfterBlank = (str) => {
-    const idx = str.indexOf(" ");
+    const idx = str.indexOf(" ", 6);
     if (idx < 0) {
       return str;
     }
@@ -22,11 +22,11 @@ function Isbn() {
     const isbnInput = e.target.value;
     const dashRemoved = isbnInput.replaceAll("-", "");
     const isbnRemoved = dashRemoved.replaceAll("ISBN", "");
-    const cutBlank = cutAfterBlank(isbnRemoved);
-
-    setOutput(cutBlank);
-    navigator.clipboard.writeText(cutBlank);
-    setOutputCount(cutBlank.length);
+    const cutBlank = cutAfterBlank(isbnRemoved.trim());
+    const formattedString = cutBlank.slice(0, 13);
+    setOutput(formattedString);
+    navigator.clipboard.writeText(formattedString);
+    setOutputCount(formattedString.length);
   };
 
   const onInputFocus = () => {
@@ -72,6 +72,9 @@ function Isbn() {
             InputLabelProps={{ shrink: true }}
             InputProps={{
               endAdornment: <InputAdornment position="end">{outputCount}</InputAdornment>,
+            }}
+            inputProps={{
+              maxLength: 13,
             }}
           />
           <Box>
