@@ -18,8 +18,12 @@ function Isbn() {
     return str.slice(0, idx);
   };
   const onInputChange = (e) => {
-    setInput(e.target.value);
-    const isbnInput = e.target.value;
+    let inputText = e;
+    if (typeof e != "string") {
+      inputText = e.target.value;
+    }
+    setInput(inputText);
+    const isbnInput = inputText;
     const dashRemoved = isbnInput.replaceAll("-", "");
     const isbnRemoved = dashRemoved.replaceAll("ISBN", "");
     const cutBlank = cutAfterBlank(isbnRemoved.trim());
@@ -30,7 +34,11 @@ function Isbn() {
   };
 
   const onInputFocus = () => {
-    setInput("");
+    // setInput("");
+    navigator.clipboard.readText().then((res) => {
+      // setInput(res);
+      onInputChange(res);
+    });
   };
 
   const copyOutput = () => {
@@ -101,7 +109,7 @@ function Isbn() {
         <Box>
           <Stack direction={"row"} spacing={2} justifyContent="center">
             <ButtonGroup variant="outlined" area-label="outlined button group">
-              <Button href="#" target="_blank">
+              <Button href="https://liblas.cnu.ac.kr/FN/app/index.html" target="_blank">
                 Tulip
               </Button>
               <Button href="https://dict.naver.com/" target="_blank">
