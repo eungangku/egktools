@@ -1,6 +1,6 @@
+// react-icons, mui, react-mui-carousel-artemm
 import { useState, useMemo } from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
-// import Carousel from "react-material-ui-carousel";
 import Carousel from "react-mui-carousel-artemm";
 import "./App.css";
 import styles from "./App.module.css";
@@ -21,6 +21,7 @@ import RandomArtDetail from "./routes/RandomArtDetail";
 import VideoDurationCalculator from "./routes/VideoDurationCalculator";
 import PomodoroTimer from "./routes/PomodoroTimer";
 import Isbn from "./routes/Isbn";
+import DDayCountdown from "./routes/DDayCountdown";
 import { SiImgur } from "react-icons/si";
 import { RiSpeedFill } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
@@ -51,6 +52,10 @@ function ToolList({ style = {} }) {
       <Link to="/isbn-tools">
         <ImLibrary />
         <p>ISBN Tools</p>
+      </Link>
+      <Link to="/dday-countdown">
+        <FiClock />
+        <p>D-Day Countdown</p>
       </Link>
     </div>
   );
@@ -117,6 +122,7 @@ function App() {
             <Route path="/pomodoro-timer/rest" element={<PomodoroTimer type={"rest"} time={60 * 6} />} />
             <Route path="/pomodoro-timer" element={<PomodoroTimer type={"focus"} time={60 * 30} />} />
             <Route path="/isbn-tools" element={<Isbn />} />
+            <Route path="/dday-countdown" element={<DDayCountdown />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </Router>
