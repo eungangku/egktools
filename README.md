@@ -2,6 +2,6 @@
 
 https://egktools.deta.dev
 
-## EGKTools on React
+## EGKTools on React JS
 
-https://eungangku.github.io/EGKTools (Under development)
+https://egktools.thedev.id/ (Under development)
